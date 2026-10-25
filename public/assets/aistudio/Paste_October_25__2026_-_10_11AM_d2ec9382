@@ -1,0 +1,707 @@
+# INKLOOM AI — COMPLETE WEBSITE DEVELOPMENT PROMPT
+## Preserve Original Design + Add All Features Without Removing Anything
+
+### MOST IMPORTANT INSTRUCTION — READ FIRST
+
+I have already created the first version of my INKLOOM AI website. I like the original website design, layout, color combination, visual appearance, component placement, and overall user experience.
+
+**Your task is to improve and complete my existing website, NOT redesign it.**
+
+Before making any changes:
+
+1. Inspect the entire existing project and understand its current design, pages, components, colors, fonts, animations, navigation, and features.
+2. Identify the original website's visual style and preserve it as the source of truth.
+3. Keep the original layout, landing page, dashboard appearance, card designs, navigation, spacing, typography, colors, gradients, backgrounds, and existing animations.
+4. Keep every existing feature, button, component, page, interaction, and workflow.
+5. Add the new functionality described below to the existing design.
+6. Fix broken or incomplete functionality without unnecessarily changing the original UI.
+7. Do not replace the original website with a new template, generic SaaS dashboard, or different design system.
+8. Do not delete working code or rebuild existing pages from scratch unless absolutely necessary.
+9. If a new feature needs a UI component, design it to match the existing INKLOOM AI interface.
+10. If a design change is technically necessary, make the smallest possible change and preserve the original visual identity.
+
+**Non-negotiable rule:** Preserve the original design and all existing features. Enhance the functionality behind the existing design.
+
+---
+
+# 1. Project Identity
+
+**Product name:** INKLOOM AI
+
+**Product description:** Brand Governance Before Publication
+
+**Tagline:** Check every claim. Protect every brand. Publish with confidence.
+
+INKLOOM AI is an AI-powered brand governance platform that checks marketing content and creative assets before publication.
+
+It helps teams verify that content follows approved company facts, brand terminology, tone of voice, visual identity, accessibility requirements, and evidence policies.
+
+The application should help creators identify issues, understand why they matter, correct content, and submit revised versions for human approval.
+
+The system must provide traceable evidence, revision history, and governance insights.
+
+# 2. Original Website Design Preservation
+
+Treat the existing INKLOOM AI website as the primary design reference.
+
+Preserve:
+
+- The original landing page and its sections.
+- Existing navigation and page hierarchy.
+- Existing background and visual effects.
+- Original color palette and typography.
+- Existing buttons, cards, panels, modals, and layouts.
+- Existing animations and transitions.
+- Existing responsive design.
+- Existing branding, product identity, and visual language.
+- All current working features and user flows.
+
+Do not introduce an unrelated visual theme or replace the original design with the colors and layouts of a generic admin dashboard.
+
+If the original design already contains a moving neural-network background, enhance that same effect rather than replacing it with a different animation.
+
+If the original website uses particular colors, reuse those colors throughout new pages, the Copilot, charts, dialogs, and forms.
+
+New pages must look like natural extensions of the existing website.
+
+Before editing, inspect the source code and create an internal inventory of all existing pages, features, and components. After implementation, verify that every original feature remains available.
+
+# 3. Complete the Existing Full-Stack Application
+
+Build on the existing project rather than starting a separate replacement application.
+
+Use the existing technology stack when it is functional. If the project requires a backend or database that does not yet exist, integrate them without breaking the current frontend.
+
+Preferred technology stack where appropriate:
+
+**Frontend**
+- React and TypeScript.
+- Vite.
+- Tailwind CSS.
+- Framer Motion.
+- Lucide React.
+- React Router.
+
+**Backend**
+- Python and FastAPI.
+- Pydantic validation.
+- SQLAlchemy or an equivalent ORM.
+- PostgreSQL.
+- Database migrations.
+- A configurable server-side LLM integration.
+
+Use reusable components and maintain a clear separation between UI, business logic, APIs, and database operations.
+
+Do not rewrite the entire frontend just to introduce the backend.
+
+# 4. Original Moving Neural Network Background
+
+Preserve the existing animated background and improve its implementation if needed.
+
+The background should create a living, intelligent, connected neural-network effect using:
+
+- Moving particles or nodes.
+- Lines connecting nearby particles.
+- Gradual movement and changing connections.
+- Subtle light effects.
+- Smooth gradients matching the original website colors.
+- Gentle cursor-responsive movement on supported devices.
+- Responsive animation density.
+- Appropriate performance on mobile devices.
+
+Use Canvas or another appropriate rendering technique if necessary.
+
+The background must genuinely animate rather than display a static image.
+
+Keep text and controls readable above the animation. Prevent the background from blocking clicks or touch interactions.
+
+Respect reduced-motion preferences and provide a low-performance fallback.
+
+Do not replace the original animation with a new style simply because another style looks different or more modern.
+
+# 5. Functional Dark and Light Mode
+
+Keep the original theme design and add a fully functional theme toggle if it is not already working.
+
+Requirements:
+
+- Dark mode.
+- Light mode.
+- Consistent styling across every page.
+- Persistent theme preference.
+- System theme detection when the user has not chosen a preference.
+- No unnecessary flash of the wrong theme during page loading.
+- Accessible text and control contrast in both modes.
+
+The toggle must change the actual interface, not merely its icon.
+
+# 6. Existing Features Must Remain Intact
+
+All existing website features must continue to work.
+
+Do not remove any existing:
+- Navigation items.
+- Buttons.
+- Landing page sections.
+- Review tools.
+- Dashboard components.
+- Animations.
+- Forms.
+- Modals.
+- Chat interfaces.
+- Upload controls.
+- Brand governance rules.
+- User workflows.
+
+If a feature currently looks correct but does not function, repair its implementation while preserving its appearance.
+
+Do not replace a functional feature with a static mockup.
+
+# 7. Dashboard
+
+Retain the original dashboard design and connect its components to actual application data.
+
+The dashboard should display relevant information such as:
+
+- Total reviews.
+- Pending reviews.
+- Critical or high-severity findings.
+- Approved content.
+- Content requiring revision.
+- Recent review activity.
+- Common governance issues.
+- Review status distribution.
+- Governance trends.
+- Quick actions.
+
+Use the existing dashboard layout and styling. Populate it with real stored information where available.
+
+When the database contains no information, display meaningful empty states rather than fabricated statistics.
+
+# 8. Brand Profiles and Knowledge Library
+
+Implement or complete brand profile management.
+
+Each profile may contain:
+
+- Brand name and description.
+- Approved product and company names.
+- Preferred terminology.
+- Prohibited terminology.
+- Brand tone and voice.
+- Approved claims.
+- Claims requiring evidence.
+- Restricted claims.
+- Approved messaging.
+- Visual identity rules.
+- Brand colors and typography.
+- Accessibility guidelines.
+- Review policies.
+
+Create a knowledge library that accepts supported documents such as PDF, DOCX, and TXT.
+
+For each uploaded source, retain its filename, brand association, upload time, processing status, extracted content, and relevant version information.
+
+Use these approved sources as the primary reference for brand-specific verification and Copilot answers.
+
+Display genuine source references where available. Never fabricate document names, page numbers, quotations, or evidence.
+
+# 9. Content Submission and Governance Workflow
+
+Keep the original content review experience and make its entire workflow functional.
+
+Users should be able to:
+
+1. Select a brand.
+2. Enter a review title and campaign name.
+3. Paste marketing content.
+4. Upload supported content and creative assets.
+5. Select the content type.
+6. Submit the content for analysis.
+7. Review findings and evidence.
+8. Edit content or apply suggested corrections.
+9. Save a revised version.
+10. Submit it for human approval.
+11. View the final decision and audit history.
+
+Use the following eight-step governance workflow:
+
+**Configure → Submit → Check → Explain → Revise → Approve → Audit → Insights**
+
+Each stage must be connected to the others and persist relevant data.
+
+# 10. AI Governance Engine
+
+Create a genuine backend analysis pipeline to evaluate submitted content against approved brand rules and sources.
+
+### Factual verification
+Identify claims that conflict with approved facts, numerical inconsistencies, unsupported superlatives, and claims for which evidence cannot be found.
+
+### Terminology verification
+Identify incorrect product names, outdated terms, prohibited language, and inconsistent terminology.
+
+### Tone verification
+Check whether the content follows the selected brand's tone and voice guidelines.
+
+### Policy verification
+Check content against configured governance rules, required disclaimers, prohibited statements, and applicable content requirements.
+
+### Visual and accessibility verification
+Where supported by the uploaded format and available analysis tools, inspect:
+
+- Logo usage.
+- Brand colors.
+- Text contrast.
+- Missing alternative text.
+- Inconsistent visual identity.
+- Readability and accessibility issues.
+
+Only report checks that were actually performed. When a property cannot be reliably evaluated, explain the limitation and recommend human review.
+
+### Finding structure
+
+Each finding must include:
+
+- Finding ID.
+- Category.
+- Severity.
+- Problem description.
+- Relevant text or asset.
+- Explanation.
+- Evidence source, where available.
+- Applicable brand rule.
+- Suggested correction.
+- Verification status.
+- Confidence information where appropriate.
+
+Use clear statuses such as:
+
+- Verified against source.
+- Conflict with approved source.
+- Evidence not found.
+- Requires human review.
+
+Do not invent evidence or present unverified statements as established facts.
+
+# 11. Demonstration Brand — Acme Vault
+
+Include a clearly labeled fictional demonstration brand.
+
+Approved facts and rules:
+
+- Fact ID `F-014`: uptime SLA is 99.9%.
+- Preferred product name: `Acme Vault`.
+- Do not refer to this product as `Acme Cloud`.
+- The claim `#1 fastest` requires supporting evidence.
+- Normal text contrast target: 4.5:1 where required by the applicable accessibility standard and text size.
+
+Use this intentionally incorrect sample sentence:
+
+“Acme Cloud is India's #1 fastest storage with guaranteed 100% uptime! Try it now.”
+
+The application should identify:
+
+1. Incorrect product name: Acme Cloud.
+2. Unsupported comparative claim: India's #1 fastest.
+3. Uptime claim that conflicts with the approved 99.9% SLA.
+
+Suggested correction:
+
+“Fast storage backed by a 99.9% uptime SLA. Try Acme Vault.”
+
+The analysis must use the configured demo rules and real application workflow. Clearly label the brand as fictional.
+
+# 12. Review Results and Suggested Corrections
+
+Preserve the existing review-results design and make its controls functional.
+
+Include:
+
+- Overall review status.
+- Findings by severity.
+- Findings by category.
+- Evidence references.
+- Original content.
+- Suggested replacements.
+- Before-and-after comparison.
+- Apply-correction action.
+- Manual editing.
+- Dismissal with a reason when permitted.
+- Comments.
+- Version history.
+- Resubmission.
+- Submission for approval.
+
+Applying a correction must create an appropriate revision without silently destroying the original content.
+
+# 13. Human Approval Center
+
+Create a working approval workflow for authorized reviewers and approvers.
+
+Users should be able to inspect the submitted version, findings, evidence, comments, and revision history.
+
+Authorized approvers can:
+
+- Approve the reviewed version.
+- Reject it with a reason.
+- Return it for revision.
+- Add comments.
+- Record a decision.
+
+Approval must be tied to a specific content version.
+
+If the content changes after approval, the earlier approval must not automatically apply to the new version.
+
+**The AI must never automatically approve or publish content.**
+
+# 14. Review History and Audit Trail
+
+Persist the history of important actions, including:
+
+- Review creation.
+- Content submissions.
+- Analysis runs.
+- Findings.
+- Corrections.
+- Revisions.
+- Comments.
+- Assignments.
+- Approval decisions.
+- Brand rule changes.
+- Source document updates.
+
+Show a chronological timeline and useful filters.
+
+Protect audit records from unauthorized changes and avoid recording secrets or sensitive credentials.
+
+# 15. Governance Insights
+
+Connect the analytics page to actual stored data.
+
+Display useful metrics such as:
+
+- Most common governance findings.
+- Unsupported-claim trends.
+- Terminology errors.
+- Severity distribution.
+- Reviews over time.
+- Approval and revision rates.
+- Review turnaround time.
+- Recurring policy issues.
+
+Allow filtering by brand and date range.
+
+Use the original website's chart styling and visual language. Do not create unrelated visual designs.
+
+Clearly distinguish real metrics from demonstration data.
+
+# 16. INKLOOM AI Copilot — Real Conversational AI
+
+The Copilot is one of the most important features. Repair or complete the existing Copilot without changing its original design unnecessarily.
+
+A previous issue was that opening the Copilot displayed only a welcome message without a working chat input or real answers.
+
+**This issue must be completely fixed.**
+
+The Copilot must provide a genuine conversational experience rather than hardcoded responses.
+
+### Interface
+- Keep the existing Copilot appearance.
+- Working message input.
+- Send button.
+- Enter-to-send support.
+- Shift+Enter for new lines.
+- Conversation history.
+- New conversation action.
+- Loading indicator.
+- Error messages and retry controls.
+- Copy-response functionality.
+- Markdown rendering.
+- Code formatting.
+- Suggested prompts for new conversations.
+- Follow-up questions.
+- Responsive mobile layout.
+
+The message input and send button must remain visible and usable whenever the Copilot is open.
+
+### General AI capabilities
+
+Users should be able to ask a wide range of ordinary questions, such as:
+
+- Explain programming concepts.
+- Help debug code.
+- Write and improve content.
+- Summarize text.
+- Brainstorm project ideas.
+- Explain technical topics.
+- Ask follow-up questions.
+- Request examples and step-by-step explanations.
+
+The Copilot must not be restricted to a few predefined questions about brand governance.
+
+### Brand-aware capabilities
+
+When relevant, the Copilot should also:
+
+- Answer questions about a selected brand.
+- Retrieve approved brand documents.
+- Explain why content was flagged.
+- Summarize governance findings.
+- Suggest compliant alternatives.
+- Compare claims with approved sources.
+- Explain brand policies.
+- Help users understand review and approval workflows.
+
+Use retrieval-augmented generation (RAG) for source-grounded brand-specific responses.
+
+### Genuine model integration
+
+Connect the Copilot to a real LLM through a backend API.
+
+Requirements:
+
+- Secure server-side API credentials.
+- Conversation context for follow-up questions.
+- Input validation.
+- Appropriate timeouts.
+- Error handling.
+- Rate limiting where appropriate.
+- Honest reporting of unavailable services.
+- Source retrieval when brand-specific evidence is required.
+
+Do not use a fixed list of canned answers as a substitute for the model.
+
+If AI credentials are missing, show a clear configuration message. Do not pretend the Copilot has generated a real AI response.
+
+# 17. Voice Assistant
+
+Add voice capabilities to the existing Copilot without replacing its chat interface.
+
+### Voice input
+- Microphone button.
+- Permission request after user action.
+- Speech recognition where supported.
+- Recording/listening indicator.
+- Stop-recording control.
+- Recognized text placed into the composer before sending.
+- Clear error handling.
+
+### Voice playback
+- Play and stop controls for assistant responses.
+- Browser text-to-speech when supported.
+- Ability to cancel playback.
+- Optional user-controlled automatic playback.
+
+Handle unsupported browsers and denied microphone permissions gracefully.
+
+Text-based chat must continue to work even if voice capabilities are unavailable.
+
+# 18. Mobile Copilot Fix
+
+Ensure that the existing Copilot works correctly on mobile without changing its overall visual identity.
+
+Requirements:
+
+- Full-screen or near-full-screen mobile chat.
+- `100dvh` with suitable fallbacks.
+- Safe-area support.
+- Visible header.
+- Independently scrollable messages.
+- Bottom composer.
+- Keyboard-aware layout where practical.
+- Correct background-scroll handling.
+- No clipped messages.
+- No hidden send or microphone buttons.
+- No overlapping controls.
+- No horizontal overflow.
+- Suitable touch targets.
+- Long code blocks that wrap or scroll properly.
+
+Test narrow widths of approximately 320–390 CSS pixels and larger devices.
+
+When the Copilot closes, restore the previous page's scroll behavior correctly.
+
+# 19. Authentication and Permissions
+
+Support the following roles:
+
+**Administrator:** Manages users, roles, brands, policies, and authorized settings.
+
+**Creator:** Submits content, reviews findings, edits revisions, and resubmits content.
+
+**Reviewer:** Inspects findings, adds comments, and requests changes.
+
+**Approver:** Makes authorized approval or rejection decisions.
+
+Implement secure authentication, password hashing, protected routes, session handling, and server-side permission checks.
+
+Do not rely only on frontend controls to enforce access.
+
+# 20. Backend and Database
+
+Integrate a proper backend and persistent database without replacing the original frontend design.
+
+Preferred backend: FastAPI with Python.
+
+Preferred database: PostgreSQL.
+
+Use appropriate database models for:
+
+- Users and roles.
+- Brand profiles.
+- Governance policies.
+- Source documents.
+- Reviews.
+- Submitted content and assets.
+- Analysis runs.
+- Findings.
+- Revisions.
+- Comments.
+- Approval decisions.
+- Audit events.
+- Copilot conversations and messages.
+
+Provide validated API endpoints for authentication, brands, sources, reviews, analysis, revisions, approvals, audit history, analytics, and Copilot conversations.
+
+Use database migrations and clear error handling.
+
+Do not rely on browser local storage as the only storage for important business records. Local storage may be used for non-sensitive preferences such as the selected theme.
+
+# 21. Security and Privacy
+
+Implement:
+
+- Server-side authorization.
+- Secure credential handling.
+- File-type and upload-size validation.
+- Safe file processing.
+- Input validation.
+- Appropriate CORS configuration.
+- Protected API endpoints.
+- Error handling and timeouts.
+- Rate limiting where practical.
+- Safe audit logging.
+- Protection against unauthorized data access.
+
+Treat uploaded documents and retrieved text as untrusted input. Never allow a document's contents to override system instructions or user permissions.
+
+Never expose AI API keys in frontend source code.
+
+# 22. Responsive Design and Accessibility
+
+Preserve the existing design while ensuring that every page works on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile phone.
+
+Avoid horizontal overflow, clipped controls, inaccessible dialogs, and broken navigation.
+
+Provide visible keyboard focus, accessible labels, meaningful button names, appropriate contrast, and useful error messages.
+
+Respect reduced-motion preferences.
+
+# 23. Project Structure and Documentation
+
+Maintain the existing project structure wherever practical.
+
+If the project needs additional organization, use an appropriate structure for frontend components, pages, API services, backend routes, database models, business logic, tests, and configuration.
+
+Provide:
+
+- `.env.example` with placeholders.
+- README with setup instructions.
+- Frontend installation and run commands.
+- Backend installation and run commands.
+- Database setup and migration instructions.
+- AI provider configuration instructions.
+- Testing instructions.
+- A clear explanation of external credentials required.
+
+Do not commit real credentials or overwrite useful project files unnecessarily.
+
+# 24. Testing and Verification
+
+Test the complete application, not just its appearance.
+
+Verify that:
+
+- The original landing page remains intact.
+- The original design and visual identity remain intact.
+- All original features remain available.
+- Existing buttons and navigation work.
+- Dark/light mode changes the interface and persists.
+- The animated background runs correctly.
+- Content submission works.
+- Governance analysis returns structured findings.
+- Evidence references are genuine.
+- Corrections create revisions.
+- Approval decisions persist.
+- Audit history is recorded.
+- Dashboard metrics use actual data.
+- The Copilot accepts messages and returns real model-generated answers.
+- Follow-up questions work.
+- Brand-specific answers retrieve relevant sources.
+- Voice input and playback work where supported.
+- Mobile Copilot controls remain visible when the keyboard opens.
+- Authentication and role permissions work.
+- Missing AI credentials produce honest errors.
+- The frontend builds successfully.
+- Backend tests pass.
+- No obvious broken routes or console errors remain.
+
+Fix problems discovered during testing.
+
+# 25. Required Implementation Workflow
+
+Follow this exact sequence:
+
+**Step 1 — Inspect:** Explore the existing repository, identify the original design, and list all existing pages and features.
+
+**Step 2 — Preserve:** Protect the original styling, layout, components, navigation, and functioning features.
+
+**Step 3 — Repair:** Fix existing broken interactions, particularly the Copilot if it lacks a working chat input or real AI responses.
+
+**Step 4 — Integrate:** Add backend APIs, database persistence, brand-source retrieval, and genuine AI functionality.
+
+**Step 5 — Enhance:** Complete governance checks, revision history, approval workflow, analytics, and voice features.
+
+**Step 6 — Refine:** Add or improve the moving background, theme persistence, responsive behavior, and accessibility without replacing the original visual design.
+
+**Step 7 — Test:** Run the application, test real workflows, inspect mobile and desktop layouts, and fix errors.
+
+**Step 8 — Report:** Explain what was implemented, which tests passed, how to run the project, and whether any external credentials remain necessary.
+
+# 26. Final Acceptance Criteria
+
+The project is complete only when all of the following are true:
+
+1. The original INKLOOM AI website design remains recognizable and unchanged in its core appearance.
+2. No existing feature has been removed or silently replaced.
+3. New features match the original visual identity.
+4. Users can create brands and manage approved sources.
+5. Users can submit content and receive meaningful governance findings.
+6. Findings contain real evidence when available and honestly identify missing evidence.
+7. Users can apply corrections and preserve version history.
+8. Authorized humans can approve, reject, or request revisions.
+9. Audit records and dashboard analytics use persisted data.
+10. The Copilot accepts general questions and returns real AI-generated answers.
+11. Brand-specific Copilot responses use relevant approved sources when available.
+12. Follow-up conversations work.
+13. Voice input and playback work on supported devices.
+14. The animated background remains smooth and does not block interactions.
+15. Dark/light mode works and persists.
+16. Mobile layouts are functional, especially the Copilot.
+17. Authentication and permissions are enforced.
+18. The frontend and backend run successfully.
+19. Important tests pass.
+20. Any feature requiring unavailable external credentials is clearly documented.
+
+# FINAL COMMAND
+
+**Work directly inside my existing INKLOOM AI project. Do not create a replacement website. Do not redesign the first-created website. Do not remove any existing features.**
+
+Preserve the original design, color palette, layout, animations, and user experience. Add and repair functionality behind the existing interface, and integrate all new features as natural extensions of the current website.
+
+The final result must be the **same original INKLOOM AI website, with all its existing features preserved and the new AI, governance, backend, database, voice, theme, and mobile capabilities fully implemented and tested.**

@@ -1,0 +1,6 @@
+{
+  "name": "INKLOOM AI",
+  "description": "Brand Governance Before Publication — Check every claim. Protect every brand. Publish with confidence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
