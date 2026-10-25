@@ -102,9 +102,9 @@ export const BrandProfiles: React.FC<BrandProfilesProps> = ({
   };
 
   return (
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-fade-in">
+    <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 space-y-6 sm:space-y-8 animate-fade-in">
       {/* Header & Brand Switcher */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">
@@ -112,11 +112,11 @@ export const BrandProfiles: React.FC<BrandProfilesProps> = ({
             </span>
             {activeBrand.isDemo && (
               <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                Fictional Demonstration Brand
+                Demo Brand
               </span>
             )}
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+          <h1 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
             Brand Profiles &amp; Knowledge Library
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
@@ -124,7 +124,7 @@ export const BrandProfiles: React.FC<BrandProfilesProps> = ({
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full sm:w-auto">
           {/* Brand Selector Dropdown */}
           <select
             value={selectedBrandId}

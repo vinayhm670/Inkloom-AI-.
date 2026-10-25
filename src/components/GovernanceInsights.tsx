@@ -35,19 +35,19 @@ export const GovernanceInsights: React.FC<GovernanceInsightsProps> = ({
   const criticalCount = allFindings.filter((f) => f.severity === 'critical').length;
 
   return (
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-fade-in">
+    <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 space-y-6 sm:space-y-8 animate-fade-in">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">
               Governance Intelligence
             </span>
             <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-300">
-              Live Aggregated Data
+              Live Data
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+          <h1 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
             Governance Insights &amp; Analytics
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
@@ -56,7 +56,7 @@ export const GovernanceInsights: React.FC<GovernanceInsightsProps> = ({
         </div>
 
         {/* Filters: Brand & Date */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full sm:w-auto">
           <select
             value={selectedBrand}
             onChange={(e) => setSelectedBrand(e.target.value)}

@@ -137,29 +137,28 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Right Actions: Role Switcher, Copilot Button, Theme Toggle, New Review */}
-        <div className="flex items-center gap-2">
+        {/* Right Actions: Role Switcher, Copilot Button, Theme Toggle, Mobile Menu */}
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* INKLOOM Copilot Trigger */}
           <button
             onClick={openCopilot}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-600 text-white shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer border border-indigo-400/30"
+            className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-600 text-white shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer border border-indigo-400/30 shrink-0"
             aria-label="Open INKLOOM AI Copilot"
           >
-            <Sparkles className="w-3.5 h-3.5 text-yellow-300 animate-spin-slow" />
-            <span className="hidden sm:inline">Copilot</span>
-            <span className="text-[10px] bg-white/20 px-1 py-0.2 rounded font-mono">AI</span>
+            <Sparkles className="w-3.5 h-3.5 text-yellow-300 animate-spin-slow shrink-0" />
+            <span className="text-xs">Copilot</span>
           </button>
 
-          {/* Role Switcher */}
+          {/* Role Switcher - compact on mobile */}
           <div className="relative">
             <button
               onClick={() => setRoleMenuOpen(!roleMenuOpen)}
-              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-colors ${roleLabels[currentRole].color}`}
+              className={`flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-medium border transition-colors ${roleLabels[currentRole].color}`}
               title="Switch user perspective"
             >
-              <span className="hidden md:inline text-slate-400 font-normal">Role:</span>
-              <span className="font-semibold">{roleLabels[currentRole].title}</span>
-              <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+              <span className="hidden sm:inline text-slate-400 font-normal">Role:</span>
+              <span className="font-semibold text-[11px] sm:text-xs">{roleLabels[currentRole].title}</span>
+              <ChevronDown className="w-3 h-3 opacity-70" />
             </button>
 
             {roleMenuOpen && (
@@ -194,17 +193,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Dark / Light Mode Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 border border-slate-800 transition-colors"
+            className="p-1.5 sm:p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 border border-slate-800 transition-colors shrink-0"
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-400" />}
+            {theme === 'dark' ? <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" /> : <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400" />}
           </button>
 
-          {/* New Review Quick Action */}
+          {/* New Review Quick Action (hidden on small mobile to prevent overflow, available in drawer) */}
           <button
             onClick={() => setActiveTab('review')}
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-sm transition-all cursor-pointer"
+            className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-sm transition-all cursor-pointer shrink-0"
           >
             <PlusCircle className="w-3.5 h-3.5" />
             <span>New Review</span>
@@ -213,7 +212,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Mobile hamburger menu */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none"
+            className="lg:hidden p-1.5 sm:p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none shrink-0"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

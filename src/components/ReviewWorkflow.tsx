@@ -239,10 +239,10 @@ export const ReviewWorkflow: React.FC<ReviewWorkflowProps> = ({
   };
 
   return (
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-fade-in">
+    <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 space-y-6 sm:space-y-8 animate-fade-in">
       {/* 8-Step Progress Ribbon */}
-      <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-xl backdrop-blur">
-        <div className="flex items-center justify-between overflow-x-auto pb-1 gap-2">
+      <div className="p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-900/80 border border-slate-800 shadow-xl backdrop-blur">
+        <div className="flex items-center overflow-x-auto pb-1 gap-1.5 sm:gap-2 scrollbar-none">
           {steps.map((st) => {
             const isActive = currentStep === st.num;
             const isPassed = currentStep > st.num;

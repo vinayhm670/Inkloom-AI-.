@@ -55,15 +55,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   };
 
   return (
-    <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-20">
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-14 space-y-12 sm:space-y-20">
       {/* Hero Section */}
-      <div className="text-center space-y-6 max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-semibold tracking-wide shadow-sm animate-fade-in">
-          <ShieldCheck className="w-4 h-4 text-sky-400" />
+      <div className="text-center space-y-4 sm:space-y-6 max-w-4xl mx-auto">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-semibold tracking-wide shadow-sm animate-fade-in">
+          <ShieldCheck className="w-4 h-4 text-sky-400 shrink-0" />
           <span>Brand Governance Before Publication</span>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
           Check every claim.{' '}
           <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
             Protect every brand.
@@ -72,16 +72,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           Publish with confidence.
         </h1>
 
-        <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed px-1">
           INKLOOM AI is an enterprise pre-publication governance platform that verifies marketing
           content against approved company facts, brand terminology, tone of voice, visual identity,
           and evidence policies before publication.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 pt-2 w-full max-w-md mx-auto sm:max-w-none">
           <button
             onClick={() => onStartReview()}
-            className="flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-sky-500 to-cyan-400 text-slate-950 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+            className="flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-sky-500 to-cyan-400 text-slate-950 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
             <FileCheck className="w-4 h-4" />
             <span>Launch Content Review</span>
@@ -90,7 +90,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           <button
             onClick={onOpenCopilot}
-            className="flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm bg-slate-900/90 text-slate-200 border border-slate-700 hover:bg-slate-800 hover:border-slate-600 transition-all cursor-pointer shadow-md"
+            className="flex items-center justify-center gap-2 px-4 sm:px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm bg-slate-900/90 text-slate-200 border border-slate-700 hover:bg-slate-800 hover:border-slate-600 transition-all cursor-pointer shadow-md"
           >
             <Sparkles className="w-4 h-4 text-yellow-400" />
             <span>Ask INKLOOM Copilot</span>
@@ -98,7 +98,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           <button
             onClick={onOpenDashboard}
-            className="flex items-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm text-slate-400 hover:text-white transition-colors"
+            className="flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl font-medium text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
           >
             <span>View Governance Dashboard</span>
           </button>
@@ -106,7 +106,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </div>
 
       {/* Interactive Live Sandbox Section: Demonstration Brand Acme Vault */}
-      <div className="relative rounded-2xl bg-gradient-to-b from-slate-900/90 via-slate-900/80 to-slate-950/95 border border-slate-800 shadow-2xl p-6 sm:p-8 backdrop-blur-xl">
+      <div className="relative rounded-2xl bg-gradient-to-b from-slate-900/90 via-slate-900/80 to-slate-950/95 border border-slate-800 shadow-2xl p-4 sm:p-8 backdrop-blur-xl">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
           <div>
             <div className="flex items-center gap-2">

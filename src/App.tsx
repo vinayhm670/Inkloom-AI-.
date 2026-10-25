@@ -138,7 +138,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen relative font-sans transition-colors duration-200 ${
+      className={`min-h-screen w-full max-w-full overflow-x-hidden relative font-sans transition-colors duration-200 ${
         theme === 'dark' ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
       }`}
     >

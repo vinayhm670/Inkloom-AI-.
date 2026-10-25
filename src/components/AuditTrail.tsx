@@ -64,19 +64,19 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({ auditLog }) => {
   };
 
   return (
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-fade-in">
+    <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 space-y-6 sm:space-y-8 animate-fade-in">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">
               Immutable Governance Log
             </span>
             <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-slate-300">
-              {filteredLog.length} Recorded Events
+              {filteredLog.length} Events
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+          <h1 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
             Review History &amp; Audit Trail
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
@@ -84,7 +84,7 @@ export const AuditTrail: React.FC<AuditTrailProps> = ({ auditLog }) => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 w-full sm:w-auto">
           <button
             onClick={() => exportAuditLog('csv')}
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 transition-colors cursor-pointer"
