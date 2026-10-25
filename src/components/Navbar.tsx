@@ -15,6 +15,7 @@ import {
   ChevronDown,
   Menu,
   X,
+  User,
 } from 'lucide-react';
 import { UserRole } from '../types';
 
@@ -81,29 +82,29 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md border-b transition-colors duration-200 bg-slate-950/80 border-slate-800 text-slate-100 dark:bg-slate-950/80 dark:border-slate-800 light:bg-white/90 light:border-slate-200 light:text-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
-        {/* Brand & Logo */}
-        <div className="flex items-center gap-3">
+    <header className="sticky top-0 z-40 w-full max-w-full backdrop-blur-md border-b transition-colors duration-200 bg-slate-950/85 border-slate-800 text-slate-100 dark:bg-slate-950/85 dark:border-slate-800 light:bg-white/95 light:border-slate-200 light:text-slate-900">
+      <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-1 sm:gap-2 overflow-hidden">
+        {/* Brand & Logo - Compact & Protected on Mobile */}
+        <div className="flex items-center gap-1.5 shrink-0">
           <button
             onClick={() => setActiveTab('overview')}
-            className="flex items-center gap-2.5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg p-1"
+            className="flex items-center gap-1.5 sm:gap-2 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-lg p-0.5"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-all duration-300">
+            <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:shadow-sky-500/40 transition-all duration-300 shrink-0">
               <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5 text-sky-400 group-hover:scale-110 transition-transform duration-300" />
+                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400 group-hover:scale-110 transition-transform duration-300" />
               </div>
             </div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+              <div className="flex items-center gap-1">
+                <span className="font-extrabold text-sm sm:text-lg tracking-tight bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
                   INKLOOM
                 </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 text-sky-400">
+                <span className="text-[9px] sm:text-[10px] font-bold px-1 py-0.2 rounded bg-sky-500/10 border border-sky-500/30 text-sky-400">
                   AI
                 </span>
               </div>
-              <p className="text-[10px] text-slate-400 font-medium tracking-wide uppercase">
+              <p className="hidden sm:block text-[10px] text-slate-400 font-medium tracking-wide uppercase">
                 Brand Governance
               </p>
             </div>
@@ -137,27 +138,27 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Right Actions: Role Switcher, Copilot Button, Theme Toggle, Mobile Menu */}
-        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+        {/* Right Actions: Fully Fitting on Mobile Viewports */}
+        <div className="flex items-center gap-1 sm:gap-2 shrink-0">
           {/* INKLOOM Copilot Trigger */}
           <button
             onClick={openCopilot}
-            className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-600 text-white shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer border border-indigo-400/30 shrink-0"
+            className="flex items-center gap-1 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-600 text-white shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer border border-indigo-400/30 shrink-0"
             aria-label="Open INKLOOM AI Copilot"
           >
             <Sparkles className="w-3.5 h-3.5 text-yellow-300 animate-spin-slow shrink-0" />
             <span className="text-xs">Copilot</span>
           </button>
 
-          {/* Role Switcher - compact on mobile */}
-          <div className="relative">
+          {/* Role Switcher - Desktop / Tablet (moved into drawer on small mobile) */}
+          <div className="relative hidden md:block">
             <button
               onClick={() => setRoleMenuOpen(!roleMenuOpen)}
-              className={`flex items-center gap-1 px-2 py-1.5 rounded-lg text-xs font-medium border transition-colors ${roleLabels[currentRole].color}`}
+              className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-colors ${roleLabels[currentRole].color}`}
               title="Switch user perspective"
             >
-              <span className="hidden sm:inline text-slate-400 font-normal">Role:</span>
-              <span className="font-semibold text-[11px] sm:text-xs">{roleLabels[currentRole].title}</span>
+              <span className="text-slate-400 font-normal">Role:</span>
+              <span className="font-semibold">{roleLabels[currentRole].title}</span>
               <ChevronDown className="w-3 h-3 opacity-70" />
             </button>
 
@@ -190,17 +191,21 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {/* Dark / Light Mode Toggle */}
+          {/* Dark / Light Mode Toggle - ALWAYS 100% VISIBLE & UNSQUEEZED */}
           <button
             onClick={toggleTheme}
-            className="p-1.5 sm:p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800/60 border border-slate-800 transition-colors shrink-0"
+            className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 border border-slate-700/80 transition-colors shrink-0 flex items-center justify-center bg-slate-900/60"
             title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400" /> : <Moon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400" />}
+            {theme === 'dark' ? (
+              <Sun className="w-4 h-4 text-amber-400 shrink-0" />
+            ) : (
+              <Moon className="w-4 h-4 text-indigo-400 shrink-0" />
+            )}
           </button>
 
-          {/* New Review Quick Action (hidden on small mobile to prevent overflow, available in drawer) */}
+          {/* New Review Quick Action (Desktop) */}
           <button
             onClick={() => setActiveTab('review')}
             className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 hover:bg-sky-400 text-slate-950 shadow-sm transition-all cursor-pointer shrink-0"
@@ -209,48 +214,89 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>New Review</span>
           </button>
 
-          {/* Mobile hamburger menu */}
+          {/* Mobile hamburger menu - ALWAYS 100% VISIBLE */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-1.5 sm:p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none shrink-0"
+            className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 border border-slate-700/80 focus:outline-none shrink-0 flex items-center justify-center bg-slate-900/60"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-3 pb-5 space-y-2">
-          {navLinks.map((link) => {
-            const Icon = link.icon;
-            const isActive = activeTab === link.id;
-            return (
-              <button
-                key={link.id}
-                onClick={() => {
-                  setActiveTab(link.id);
-                  setMobileMenuOpen(false);
-                }}
-                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium ${
-                  isActive
-                    ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30'
-                    : 'text-slate-300 hover:bg-slate-900'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <Icon className="w-4 h-4 text-sky-400" />
-                  <span>{link.label}</span>
-                </div>
-                {link.badge !== undefined && (
-                  <span className="px-2 py-0.5 text-xs font-bold rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                    {link.badge}
-                  </span>
-                )}
-              </button>
-            );
-          })}
+        <div className="lg:hidden border-t border-slate-800 bg-slate-950/98 px-4 pt-3 pb-6 space-y-4 shadow-2xl animate-fade-in">
+          {/* Mobile Role Switcher */}
+          <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+            <div className="flex items-center justify-between text-xs text-slate-400">
+              <span className="font-semibold uppercase tracking-wider text-[10px]">Active User Persona</span>
+              <span className="font-mono text-sky-400 text-[10px]">Tap to Switch</span>
+            </div>
+            <div className="grid grid-cols-2 gap-1.5">
+              {(Object.keys(roleLabels) as UserRole[]).map((role) => (
+                <button
+                  key={role}
+                  onClick={() => setCurrentRole(role)}
+                  className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition-all text-left flex items-center justify-between ${
+                    currentRole === role
+                      ? `${roleLabels[role].color} shadow-sm ring-1 ring-sky-500/50`
+                      : 'bg-slate-950/70 text-slate-400 border-slate-800 hover:text-white'
+                  }`}
+                >
+                  <span>{roleLabels[role].title}</span>
+                  {currentRole === role && <span className="text-[10px] text-sky-400">✓</span>}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile Navigation Links */}
+          <div className="space-y-1">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              const isActive = activeTab === link.id;
+              return (
+                <button
+                  key={link.id}
+                  onClick={() => {
+                    setActiveTab(link.id);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium ${
+                    isActive
+                      ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30 font-semibold'
+                      : 'text-slate-300 hover:bg-slate-900'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Icon className="w-4 h-4 text-sky-400" />
+                    <span>{link.label}</span>
+                  </div>
+                  {link.badge !== undefined && (
+                    <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                      {link.badge}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Mobile "New Review" Action */}
+          <div className="pt-2 border-t border-slate-800">
+            <button
+              onClick={() => {
+                setActiveTab('review');
+                setMobileMenuOpen(false);
+              }}
+              className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs shadow-md transition-colors"
+            >
+              <PlusCircle className="w-4 h-4" />
+              <span>Create New Review</span>
+            </button>
+          </div>
         </div>
       )}
     </header>
